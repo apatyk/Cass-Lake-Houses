@@ -1,0 +1,414 @@
+html {
+	font-family: 'Lato', sans-serif; 
+	font-size: 13pt;
+	background: white;
+	min-height: 100%;
+	position: relative;
+}
+
+h1 {
+	font-family: 'Shadows Into Light Two', cursive;
+	font-size: 42pt;
+	margin: 0;
+	margin-bottom: 0.5rem;
+	display: inline-block;
+	padding-right: 0.25em;
+	clear: left;
+	text-shadow: 1px 1px rgba(0,0,0,0.25);
+}
+h2 {
+	margin: 0;
+	font-family: 'Shadows Into Light Two', cursive;
+}
+
+body {
+	width: auto;
+    margin-left: 25%;
+	margin-right: 5%;
+	margin-bottom: 3.25rem;
+	padding: 1.5em;
+    padding-top: 2em;
+}
+
+a {
+	color: #00ceb4;
+}
+.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+figure {
+	text-align: center;
+}
+img.lhlogo {
+	width: 8rem;
+	margin-bottom: -0.5rem;
+}
+img.sclogo {
+	width: 5rem;
+	margin-bottom: -0.5rem;
+}
+img.whlogo {
+	height: 4.5rem;
+	margin-bottom: -0.75rem;
+}
+::selection {
+	background: rgba(0, 206, 180, 0.5);
+}
+a::selection {
+	color: white;
+}
+header li::selection {
+	background: none;
+}
+
+/*****HEADER*****/
+header {
+	position: fixed;
+		left: 0;
+		top: 0;
+	display: block;
+	width: 20%;
+    background: #00ceb4;
+    height: 100vh;
+    padding-top: 2em;
+    padding-right: 1em;
+	font-size: 14pt;
+	border-right: 1px solid transparent;
+	border-image: url(/img/wave.png) 182 repeat;
+	-webkit-border-image: url(/img/wave.png) 182 repeat;
+	-o-border-image: url(/img/wave.png) 182 repeat;
+	border-image-width: 2em;
+	border-image-outset: 1.975em;
+}
+header ul {
+	text-decoration: none;
+	list-style: none;
+}
+
+header a {
+	text-decoration: none;
+	color: black;
+}
+header a:hover {
+    color: #007F6F;
+}
+header li {
+	padding: 1em;
+	border-radius: 1em;
+	background-repeat: no-repeat;
+	-webkit-background-repeat: no-repeat;
+	background-position: 35em;
+	-webkit-background-position: 35em;
+	margin: 1.5rem 0;
+	font-family: 'Shadows Into Light Two', cursive;
+	font-weight: bold;
+    transition: none 350ms ease-out;
+    transition-property: background, color;
+}
+header li.contact {
+	margin-top: 6rem;
+}
+header li.home, .active li.home:hover  {
+	background-image: url(/img/home_icon.svg);
+}
+.active li.home {
+	background-image: url(/img/home_icon_white.svg);
+}
+header li.lh, .active li.lh:hover, .active li.lh {
+	background-image: url(/img/lake_house_logo.svg);
+}
+header li.sc, .active li.sc:hover, .active li.sc {
+	background-image: url(/img/sunset_cottage_logo.svg);
+}
+header li.wh, .active li.wh:hover, .active li.wh {
+	background-image: url(/img/wakefield_house_logo.svg);
+}
+header li.rates, .active li.rates:hover {
+	background-image: url(/img/rates_icon.svg);
+}
+.active li.rates {
+	background-image: url(/img/rates_icon_white.svg);
+}
+header li.contact, .active li.contact:hover {
+	background-image: url(/img/contact_icon.svg);
+	background-size: 4.5em;
+}
+.active li.contact {
+	background-image: url(/img/contact_icon_white.svg);
+	background-size: 4.5em;
+}
+header li:hover {
+	background-position: right;
+	background-color: white;
+}
+header li:active {
+	background-color: #BFF5E8;
+	background-position: right;
+}
+.active {
+    color: white;
+}
+.active li {
+	background: #007F6F;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+#menu_button, #mobile_header, #close_menu, #mobile_menu, #menu_button img {
+    display: none;
+}
+
+/*****FOOTER*****/
+footer {
+	width: 80%;
+	text-align: center;
+	font-size: 10.5pt;
+	clear: both;
+	position: absolute;
+		bottom: 0;
+		left: 20%;
+	height: 3rem;
+}
+
+footer.housepage {
+	width: 45%;
+}
+footer.contact {
+	height: 3.8rem;
+}
+
+/*****RATES PAGE*****/
+section p {
+	text-align: center;
+}
+#house_rates_flexbox {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.house_rates {
+	margin: 1rem;
+	padding: 5rem;
+	width: 32%;
+	text-align: center;
+	border-radius: 1em;
+	background: #BFF5E8;
+}
+.house_rates p {
+	color: #00ceb4;
+}
+.house_rates b {
+	font-size: 24pt;
+}
+#house_rates_flexbox > .house_rates img {
+	width: 65%;
+}
+
+/*****PHOTO GALLERY*****/
+#gallery {
+	float: right;
+	padding-left: 1em;
+	max-width: 40em;
+	width: 50%;
+}
+#feature img{
+	width: 100%;
+}
+img.thumbnail {
+	height: 4.35rem;
+	margin: 0.05em;
+	cursor: pointer;
+	display: inline-block;
+	opacity: 0.6;
+	transition: all 200ms ease-in-out;
+	z-index: -1;
+}
+img.active {
+	opacity: 1;
+	border-bottom: 4px solid #007F6F;
+}
+
+/*****SCREEN SIZES BELOW 1500PX*****/
+@media (max-width: 1500px) {
+	#gallery {
+		float: none;
+		text-align: center;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0;
+		}
+	header li.home, header li.lh, header li.sc, header li.wh, header li.rates, header li.contact {
+		background-image: none;
+	}
+	.active li.home, .active li.lh, .active li.sc, .active li.wh, .active li.rates, .active li.contact {
+		background-image: none;
+	}
+	.active li.home:hover, .active li.lh:hover, .active li.sc:hover, .active li.wh:hover, .active li.rates:hover, .active li.contact:hover {
+		background-image: none;
+	}
+	header {
+		border-image-outset: 1.975em;
+	}
+	.house_rates {
+		padding: 2.5rem;
+		margin: 0.25rem;
+	}
+	footer.housepage {
+		width: 80%;
+	}
+}
+
+/*****SCREEN SIZES BELOW 800PX (MOBILE)*****/
+@media (max-width: 800px) {
+	body {
+		width: auto;
+        margin-left: 0;
+        margin-right: 0;
+		margin-top: 2em;
+	}
+	h1 {
+		font-size: 28pt;
+		text-align: center;
+		width: 110%;
+		padding: 0;
+		position: relative;
+			left: 50%;
+		transform: translateX(-50%);
+	}
+	h1 img {
+		display: none;
+	}
+	.mobile_centered {
+		width: 100%;
+	}
+	footer.housepage {
+		width: 100%;
+	}
+	table {
+		width: 115%;
+		position: relative;
+			left: 50%;
+		transform: translateX(-50%);
+	}
+    /*****MOBILE MENU*****/
+    header {
+        width: 18rem;
+        left: -19.1rem;
+		transition: 0.2s all ease-out;
+        z-index: 99;
+		border: 0;
+		padding: 0;
+    }
+	header ul {
+		margin-top: -0.25rem;
+	}
+	header li {
+		width: 11.25rem;
+		margin: 0.75rem -2rem;
+	}
+	header li.contact {
+		margin-top: 1rem;
+	}
+	header .active {
+		border-radius: 1em;
+	}
+    #mobile_header {
+        display: block;
+        width: 100%;
+        height: 3.5em;
+        background: #00CEB4;
+        position: fixed;
+            top: 0;
+            left: 0;
+		z-index: 1;
+    }
+    #screen_shade {
+        display: none;
+        position: fixed;
+            left: 0;
+            top: 0;
+        height: 100vh;
+        width: 100vw;
+        background: black;
+        opacity: 0.5;
+    }
+    #mobile_menu:checked ~ header{
+        left: 0;
+    }
+    #mobile_menu:checked ~ #screen_shade{
+        display: block;
+    }
+    #menu_button, #close_menu {
+        cursor: pointer;
+    }
+    #close_menu {
+        display: block;
+        position: absolute;
+            top: 0.25em;
+            right: 0.25em;
+		font-size: 28pt;
+		padding: 0.2em;
+		width: 1.25em;
+        text-align: center;
+        border-radius: 1.25em;
+		transition: 0.25s all ease-out;
+    }
+	#close_menu:hover {
+        background: #007F6F;
+		color: white;
+    }
+    input[type="checkbox"] {
+        position: absolute;
+            left: 0;
+            top: 0;
+        height: 7em;
+        width: 7em;
+        opacity: 0;
+        z-index: 99;
+    }
+    #menu_button {
+        display: block;
+        position: relative;
+			left: 0;
+		width: 4rem;
+		height: inherit;
+    }
+	#menu_button img {
+		display: block;
+		position: absolute;
+			top: 50%;
+			left: 50%;
+		transform: translate(-50%, -50%);
+	}
+    #menu_button:hover {
+        transition: 0.325s all ease-out;
+        background: #007F6F;
+		color: white;
+    }
+	.house_rates {
+		width: 100%;
+	}
+	.house_rates {
+		margin: 1rem auto;
+	}
+	footer {
+		width: 100%;
+		left: 0;
+	}
+	/*****PHOTO GALLERY*****/
+	img.thumbnail {
+		height: 3.4em;
+	}
+}
+/*****SCREEN SIZES BELOW 420PX (MOBILE)*****/
+@media (max-width: 420px) {
+	.house_rates b {
+		font-size: 20pt;
+	}
+	td {
+		padding: 0.5rem;
+	}
+	}
+}
